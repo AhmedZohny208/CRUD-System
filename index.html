@@ -1,0 +1,73 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+
+  <body>
+    <div class="container py-5">
+      <div class="mb-3">
+        <label for="productName">productName</label>
+        <input type="text" class="form-control" id="productName" />
+        <div id="productName" class="invalid-feedback">
+          ProductName cannot be blank.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="productPrice">productPrice</label>
+        <input type="number" class="form-control" id="productPrice" />
+        <div id="productPrice" class="invalid-feedback">
+          ProductPrice cannot be blank.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="productCatgory">productCatgory</label>
+        <input type="text" class="form-control" id="productCatgory" />
+        <div id="productCatgory" class="invalid-feedback">
+          productCatgory cannot be blank.
+        </div>
+      </div>
+      <div class="mb-3">
+        <label for="productDesc">productDescription</label>
+        <textarea type="text" class="form-control" id="productDesc"></textarea>
+      </div>
+
+      <button id="myBtn" onclick="add()" class="btn btn-info" onclick="addProduct()">Add Product</button>
+    </div>
+    <div class="container">
+      <input
+        type="text"
+        onkeyup="search(this.value)"
+        placeholder="search....."
+        class="form-control w-75 m-auto"
+      />
+
+      <table class="table mt-5">
+        <thead>
+          <th>index</th>
+          <th>productName</th>
+          <th>productPrice</th>
+          <th>productCatgory</th>
+          <th>productDescription</th>
+          <th>update</th>
+          <th>delete</th>
+        </thead>
+        <tbody id="tableBody">
+          <tr>
+            <td>0</td>
+            <td>iphone</td>
+            <td>5000</td>
+            <td>mobile</td>
+            <td>good</td>
+            <td>
+              <button class="btn btn-warning">update</button>
+            </td>
+            <td>
+              <button class="btn btn-danger">delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
